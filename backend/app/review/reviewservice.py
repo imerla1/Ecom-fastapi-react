@@ -25,7 +25,7 @@ class ReviewService:
             if not product:
                 raise HTTPException(
                     status_code=status.HTTP_404_NOT_FOUND,
-                    detail="Produk tidak ditemukan.",
+                    detail="Product not found",
                 )
 
             existing_review = db.query(ReviewModel).filter(
@@ -36,10 +36,10 @@ class ReviewService:
             if existing_review:
                 raise HTTPException(
                     status_code=status.HTTP_400_BAD_REQUEST,
-                    detail="Anda sudah memberikan ulasan untuk produk ini.",
+                    detail="Bad request",
                 )
 
-            # Buat ulasan baru
+            
             review_new = ReviewModel(
                 name=current_user.name,
                 user_id=current_user.id,
