@@ -6,7 +6,7 @@ load_dotenv()
 
 
 class Settings:
-    PROJECT_NAME: str = "Eccomerce APP"
+    PROJECT_NAME: str = "Eccomerce APP, GIORGI IMERLISHVILI"
     PROJECT_VERSION: str = "1.0.0"
     USE_SQLITE_DB: str = os.getenv("USE_SQLITE_DB")
     POSTGRES_USER: str = os.getenv("POSTGRES_USER")
